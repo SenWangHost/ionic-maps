@@ -1,6 +1,8 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { NavController, Platform } from 'ionic-angular';
+import { NavController, Platform, ModalController } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
+
+import { FindRoutes } from '../findroutes/findroutes';
 
 declare var google: any;
 
@@ -11,6 +13,7 @@ declare var google: any;
 export class HomePage {
   @ViewChild('map') mapElement: ElementRef;
   map: any;
+
   initMap() {
     this.geolocation.getCurrentPosition().then((position) => {
       let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
@@ -32,10 +35,13 @@ export class HomePage {
     });
   }
 
-  constructor(public navCtrl: NavController, public platform: Platform, public geolocation: Geolocation) {
+  constructor(public navCtrl: NavController, public platform: Platform, public geolocation: Geolocation, public modalCtrl: ModalController) {
     platform.ready().then(() => {
       this.initMap();
     });
   }
-
+  openModal() {
+    let modal = this.modalCtrl.create(FindRoutes);
+    modal.present();
+  }
 }

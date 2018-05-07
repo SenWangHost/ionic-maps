@@ -7,11 +7,13 @@ import { Geolocation } from '@ionic-native/geolocation';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { FindRoutes } from '../pages/findroutes/findroutes';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    FindRoutes
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,8 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    FindRoutes
   ],
   providers: [
     StatusBar,
