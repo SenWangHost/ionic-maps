@@ -8,7 +8,9 @@
 
 <ion-content>
   <div id="inputs">
-    <button ion-button (click)="openModal()" round>Find the routes</button>
+    <input #startloc id="startloc" name="startloc" type="text" placeholder="Choose Starting Point"><br>
+    <input #endloc id="endloc" name="endloc" type="text" placeholder="Choose Destination">
+    <button ion-button (click)="plotTrip()" round>Find the routes</button>
   </div>
   <div #map id="map"></div>
 </ion-content>
