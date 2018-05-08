@@ -1,6 +1,6 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>Bus Tracker</ion-title>
+        <!-- <ion-title>Bus Tracker</ion-title> -->
         <button ion-button (click)="dismiss()">
             <span ion-text color="white">Cancel</span>
         </button>
@@ -8,5 +8,19 @@
 </ion-header>
       
 <ion-content>
-    <div>This is a modal page.</div>
+    <div>
+        <!-- <ion-list>
+            <ion-item>
+                <ion-label color="primary">From:</ion-label>
+                <input #startloc id="startloc" name="startloc" type="text" placeholder="Choose Starting Point">
+            </ion-item>                   
+            <ion-item>
+                <ion-label color="primary">To:</ion-label>
+                <input #endloc id="endloc" name="endloc" type="text" placeholder="Choose Destination">
+            </ion-item>
+        </ion-list> -->
+        <input #startloc id="startloc" name="startloc" type="text" placeholder="Choose Starting Point">
+        <input #endloc id="endloc" name="endloc" type="text" placeholder="Choose Destination">
+        <button ion-button round>Find Routes</button>
+    </div>
 </ion-content>
