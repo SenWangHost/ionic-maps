@@ -7,10 +7,18 @@
 </ion-header>
 
 <ion-content>
-  <div id="inputs">
-    <input #startloc id="startloc" name="startloc" type="text" placeholder="Choose Starting Point"><br>
-    <input #endloc id="endloc" name="endloc" type="text" placeholder="Choose Destination">
-    <button ion-button (click)="plotTrip()" round>Find the routes</button>
+  <div class="inputs">
+    <div>
+      <label>From:</label>
+      <input #startloc id="startloc" name="startloc" type="text" placeholder="Choose Starting Point">
+    </div>
+    <div>
+      <label>To:</label>
+      <input #endloc id="endloc" name="endloc" type="text" placeholder="Choose Destination">
+    </div>
+    
+    <button ion-button (click)="plotTrip()" round>Find Route</button>
+    <button ion-button (click)="refreshMap()" round>Refresh Map</button>
   </div>
   <div #map id="map"></div>
 </ion-content>

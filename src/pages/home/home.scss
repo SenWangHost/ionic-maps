@@ -1,24 +1,28 @@
-.ios, .md {
- 
+.ios, .md { 
     div {
  
-      .scroll {
-        height: 100%
-      }
- 
-      #map {
-        width: 100%;
-        height: 90%;
-      }
-
-      #inputs {
-        //background-color: black;
-      }
- 
+		.scroll {
+			height: 100%
+		}
+	
+		#map {
+			width: 100%;
+			height: 80%;
+		} 
     }
- 
 }
 
 ion-title {
-  text-align: center;
+  	text-align: center;
+}
+
+.inputs {
+	label {
+		font-size: 20px;
+	}
+	input {
+		font-size: 20px;
+		border: 1px solid black;
+		border-radius: 5px;
+	}
 }

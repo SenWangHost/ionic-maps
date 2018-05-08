@@ -61,8 +61,8 @@ export class HomePage {
     })
   }
 
-  setPlaceId(placeId:string) {
-
+  refreshMap() {
+    this.initMap();
   }
 
   initMap() {
